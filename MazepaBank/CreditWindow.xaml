@@ -1,0 +1,49 @@
+﻿<Window x:Class="MazepaBank.CreditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MazepaBank"
+        mc:Ignorable="d"
+        Title="CreditWindow" Height="500" Width="500" WindowStartupLocation="CenterScreen">
+    <StackPanel Background="DimGray">
+        <WrapPanel Margin="20" HorizontalAlignment="Center">
+            <Label Content="Your current credit: " HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+            <Label x:Name="lblCurrentCredit" Margin="40 0 0 0" Content="1" FontSize="18" FontWeight="Bold"/>
+        </WrapPanel>
+        <Label FontSize="18" FontWeight="Bold" Content="CREDIT OPTIONS" HorizontalAlignment="Center" Margin="20"/>
+        <Border x:Name="PayCreditBlock" BorderThickness="0,0,0,4" Opacity="0" BorderBrush="Gray" HorizontalAlignment="Center" Margin="15" Width="470">
+            <WrapPanel HorizontalAlignment="Center">
+                <Label Content="Pay off a loan: " FontSize="18" FontWeight="Bold" />
+                <TextBox x:Name="tbCreditPaySumm" Width="150" Background="Transparent" BorderBrush="Transparent"/>
+                <Button x:Name="btnFullSumm" Click="btnFullSumm_Click" Width="140" Margin="20 0" Background="Transparent" Content="Pay full summ" FontSize="18" FontWeight="Bold" BorderBrush="Green" BorderThickness="5"/>
+            </WrapPanel>
+        </Border>
+        <Button Opacity="0" x:Name="btnPayCredit" Click="btnPayCredit_Click"  Width="140" Margin="20 0" Background="Transparent" Content="Pay Credit" FontSize="18" FontWeight="Bold" BorderBrush="Green" BorderThickness="5"/>
+        <Border IsEnabled="True" Opacity="1" x:Name="TakeCreditBlock" BorderThickness="4,4,4,4" BorderBrush="Gray" HorizontalAlignment="Center" Margin="-100" Width="370" Height="300">
+            <StackPanel HorizontalAlignment="Center">
+                <Label Content="Take a loan " FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                <Border BorderThickness="0,0,0,4" BorderBrush="Gray" HorizontalAlignment="Center" Margin="15" Width="470">
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Label Content="Loan summ: " FontSize="18" FontWeight="Bold" />
+                        <TextBox PreviewTextInput="tbCreditTakeSumm_PreviewTextInput"  x:Name="tbCreditTakeSumm" Width="150" Background="Transparent" BorderBrush="Transparent"/>
+                    </WrapPanel>
+                </Border>
+                <Border BorderThickness="0,0,0,4" BorderBrush="Gray" HorizontalAlignment="Center" Margin="15" Width="470">
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Label Content="Loan termin(month): " FontSize="18" FontWeight="Bold" />
+                        <TextBox PreviewTextInput="tbCreditTakeSumm_PreviewTextInput" x:Name="tbCreditTakePeriod" Width="150" Background="Transparent" BorderBrush="Transparent"/>
+                    </WrapPanel>
+                </Border>
+                <Border BorderThickness="0,0,0,4" BorderBrush="Gray" HorizontalAlignment="Center" Margin="15" Width="470">
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Label Content="Loan percent: " FontSize="18" FontWeight="Bold" />
+                        <Label x:Name="lblCreditPercent" Width="150" Background="Transparent" BorderBrush="Transparent"/>
+                    </WrapPanel>
+                </Border>
+                <Button x:Name="btnTakeLoan" Click="btnTakeLoan_Click" Width="140" Margin="20 0" Background="Transparent" Content="Take a loan" FontSize="18" FontWeight="Bold" BorderBrush="Green" BorderThickness="5"/>
+            </StackPanel>
+        </Border>
+
+    </StackPanel>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="MazepaBank.TransactioDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MazepaBank"
+        mc:Ignorable="d"
+        Title="TransactioDetails" Height="310" Width="300" WindowStartupLocation="CenterScreen">
+    <StackPanel Background="DimGray">
+        <Label Margin="10" Foreground="Black" FontWeight="Bold"  FontSize="18" x:Name="lblType"  HorizontalAlignment="Center"/>
+        <Label Margin="10" Foreground="Black" FontWeight="Bold"  FontSize="18" x:Name="lblName" HorizontalAlignment="Center"/>
+        <Label Margin="10" Foreground="Black" FontWeight="Bold"  FontSize="18" x:Name="lblDes"  HorizontalAlignment="Center"/>
+        <Label Margin="10" Foreground="Black" FontWeight="Bold"  FontSize="18" x:Name="lblSum"  HorizontalAlignment="Center"/>
+    </StackPanel>
+</Window>
